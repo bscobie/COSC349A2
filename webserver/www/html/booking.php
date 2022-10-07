@@ -10,7 +10,7 @@
   You successfully rented <?php echo $_POST["gameSelect"]; ?> for <?php echo $_POST["lengthSelect"]; ?>
   </h3>
 
-  <p>Click here to <a href="http://ec2-107-22-152-77.compute-1.amazonaws.com">Make a Booking</a>.</p>
+  <p>Click here to <a href="http://ec2-107-23-216-245.compute-1.amazonaws.com">Make another Booking</a>.</p>
 
 <?php
    $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
