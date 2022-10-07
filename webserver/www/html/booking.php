@@ -25,9 +25,10 @@
     $email = $_REQUEST['email'];
     $length = $_REQUEST['lengthSelect'];
 
-    $q = $pdo->query("SELECT gameID,title FROM games WHERE title='$game'");
-    while($row = $q->fetch()){
-        $sql = $pdo->query("INSERT INTO bookings (gameID, fname, lname, email, length) VALUES ('$row[gameID]', '$first_name', '$last_name', '$email', '$length')");
+   $q = mysqli_query($connection, "SELECT gameID,title FROM GAMES WHERE title='$game'");
+
+   while($row = mysqli_fetch_row($q)){
+        mysqli_query($connection, "INSERT INTO BOOKINGS (gameID, fname, lname, email, length) VALUES ('$row[0]', '$first_name', '$last_name', '$email', '$length')");
       }
  ?>
 
